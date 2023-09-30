@@ -1,0 +1,16 @@
+[
+{
+  "modid": "survivors",
+  "name": "Survivors Mod",
+  "description": "...",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://github/theDmitr",
+  "updateUrl": "",
+  "authorList": ["theDmitr"],
+  "credits": "...",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
