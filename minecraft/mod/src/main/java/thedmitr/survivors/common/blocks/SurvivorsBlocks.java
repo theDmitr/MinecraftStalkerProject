@@ -32,10 +32,27 @@ public class SurvivorsBlocks {
             new GeneralBlock("gravel_block", "gravel_block", Material.rock));
 
     public static final RailLineBlock gravel_rail_block_1 = addBlock(
-            new RailLineBlock("gravel_rail_line_block"));
+            new RailLineBlock("gravel_rail_line_block", "rails/gravel_rail_block",
+                    "gravel_block"));
 
     public static final RailAngleBlock gravel_rail_block_2 = addBlock(
-            new RailAngleBlock("gravel_rail_angle_block"));
+            new RailAngleBlock("gravel_rail_angle_block", "rails/gravel_rail_block",
+                    "gravel_block"));
+
+    public static final TimberBlock timber_block_1 = addBlock(
+            new TimberBlock("timber_block_1", "timber/timber_block_1"));
+
+    public static final GeneralBlock brick_1_block = addBlock(
+            new GeneralBlock("brick_1_block", "brick_1_block", Material.rock));
+
+    public static final GeneralBlock stone_brick_1_block = addBlock(
+            new GeneralBlock("stone_brick_1_block", "stone_brick_1_block", Material.rock));
+
+    public static final GeneralBlock wood_planks_1_block = addBlock(
+            new GeneralBlock("wood_planks_1_block", "wood_planks_1_block", Material.wood));
+
+    public static final GeneralBlock brown_wool_block = addBlock(
+            new GeneralBlock("brown_wool_block", "brown_wool_block", Material.cloth));
 
 
     private static <T extends Block> T addBlock(T block) {

@@ -9,28 +9,32 @@ import thedmitr.survivors.Survivors;
 public class RailLineBlock extends RailBlock {
 
     @SideOnly(Side.CLIENT)
-    private IIcon blockIconTop0;
+    private IIcon[] blockTopIcons;
 
-    @SideOnly(Side.CLIENT)
-    private IIcon blockIconTop1;
+    private final String masterTexture;
 
-    public RailLineBlock(String name) {
+    public RailLineBlock(String name, String topTexture, String masterTexture) {
         super(name);
+        setBlockTextureName(topTexture);
+        this.masterTexture = masterTexture;
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public IIcon getIcon(int side, int meta) {
         if (side == 1)
-            return meta == 0 || meta == 2 ? blockIconTop0 : blockIconTop1;
+            return meta == 0 || meta == 2 ? blockTopIcons[0] : blockTopIcons[1];
         return blockIcon;
     }
 
     @Override
     public void registerBlockIcons(IIconRegister iconRegister) {
-        this.blockIcon = iconRegister.registerIcon(Survivors.MODID + ":gravel_block");
-        this.blockIconTop0 = iconRegister.registerIcon(Survivors.MODID + ":rails/gravel_rail_block_1");
-        this.blockIconTop1 = iconRegister.registerIcon(Survivors.MODID + ":rails/gravel_rail_block_2");
+        this.blockIcon = iconRegister.registerIcon(Survivors.MODID + ":" + masterTexture);
+
+        blockTopIcons = new IIcon[2];
+        for (int i = 0; i < blockTopIcons.length; i++) {
+            blockTopIcons[i] = iconRegister.registerIcon(Survivors.MODID + ":" + getTextureName() + "_" + (i + 1));
+        }
     }
 
 }

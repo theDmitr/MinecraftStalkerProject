@@ -11,10 +11,17 @@ public class SurvivorsItems {
     private static final List<Item> items = new ArrayList<>();
 
 
-    public static final Item bread = additem(new Food("bread", 2, 5f));
+    public static final FoodItem bread = addItem(
+            new FoodItem("bread", "food/bread", 2, 5f));
+
+    public static final AmmoItem ammo_9_mm = addItem(
+            new AmmoItem("ammo_9_mm", "ammo/ammo_9_mm"));
+
+    public static final AmmoItem ammo_7_62_mm = addItem(
+            new AmmoItem("ammo_7_62_mm", "ammo/ammo_7_62_mm"));
 
 
-    public static Item additem(Item item) {
+    public static <T extends Item> T addItem(T item) {
         items.add(item);
         return item;
     }

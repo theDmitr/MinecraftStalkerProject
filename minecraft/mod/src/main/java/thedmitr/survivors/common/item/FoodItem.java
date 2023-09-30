@@ -3,12 +3,12 @@ package thedmitr.survivors.common.item;
 import net.minecraft.item.ItemFood;
 import thedmitr.survivors.Survivors;
 
-public class Food extends ItemFood {
+public class FoodItem extends ItemFood {
 
-    public Food(String name, int healAmount, float saturationModifier) {
+    public FoodItem(String name, String texture, int healAmount, float saturationModifier) {
         super(healAmount, saturationModifier, false);
         setUnlocalizedName(name);
-        setTextureName(Survivors.MODID + ":food/" + name);
+        setTextureName(Survivors.MODID + ":" + texture);
         setAlwaysEdible();
     }
 
