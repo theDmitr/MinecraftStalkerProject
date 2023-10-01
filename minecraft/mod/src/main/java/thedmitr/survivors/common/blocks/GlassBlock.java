@@ -25,14 +25,12 @@ public class GlassBlock extends GeneralBlock {
         return 0;
     }
 
+    @Override
     public boolean renderAsNormalBlock() {
         return false;
     }
 
-    protected boolean canSilkHarvest() {
-        return true;
-    }
-
+    @Override
     public boolean isOpaqueCube() {
         return false;
     }

@@ -54,6 +54,10 @@ public class SurvivorsBlocks {
     public static final GeneralBlock brown_wool_block = addBlock(
             new GeneralBlock("brown_wool_block", "brown_wool_block", Material.cloth));
 
+    public static final BarbedWireBlock barbed_wire_block = addBlock(
+            new BarbedWireBlock("barbed_wire_block_1", "barbed_wires/barbed_wire_block_1",
+                    Material.iron));
+
 
     private static <T extends Block> T addBlock(T block) {
         blocks.add(block);
