@@ -9,7 +9,7 @@ public class PaneBlock extends BlockPane {
 
     public PaneBlock(String name, String frontTexture, String topTexture, Material material,
                      boolean canDrop, float hardness, SoundType stepSound) {
-        super(Survivors.MODID + ":" + frontTexture, Survivors.MODID + ":" + topTexture,
+        super(Survivors.MODID + ':' + frontTexture, Survivors.MODID + ':' + topTexture,
                 material, canDrop);
         setBlockName(name);
         setHardness(hardness);

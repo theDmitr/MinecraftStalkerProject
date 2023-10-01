@@ -13,8 +13,7 @@ public class TimberBlock extends MetableBlock {
     private IIcon blockIconTopBottom;
 
     public TimberBlock(String name, String texture) {
-        super(name, Material.wood);
-        setBlockTextureName(texture);
+        super(name, texture, Material.wood);
     }
 
     @SideOnly(Side.CLIENT)
@@ -25,8 +24,8 @@ public class TimberBlock extends MetableBlock {
 
     @Override
     public void registerBlockIcons(IIconRegister iconRegister) {
-        this.blockIcon = iconRegister.registerIcon(Survivors.MODID + ":" + getTextureName());
-        this.blockIconTopBottom = iconRegister.registerIcon(Survivors.MODID + ":" + getTextureName() + "_top");
+        this.blockIcon = iconRegister.registerIcon(getTextureName());
+        this.blockIconTopBottom = iconRegister.registerIcon(getTextureName() + "_top");
     }
 
 }

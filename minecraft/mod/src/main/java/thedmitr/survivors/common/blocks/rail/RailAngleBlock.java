@@ -21,11 +21,11 @@ public class RailAngleBlock extends RailBlock {
     @SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(IIconRegister iconRegister) {
-        this.blockIcon = iconRegister.registerIcon(Survivors.MODID + ":" + masterTexture);
+        this.blockIcon = iconRegister.registerIcon(masterTexture);
 
         blockTopIcons = new IIcon[4];
         for (int i = 0; i < blockTopIcons.length; i++) {
-            blockTopIcons[i] = iconRegister.registerIcon(Survivors.MODID + ":" + getTextureName() + "_" + (i + 3));
+            blockTopIcons[i] = iconRegister.registerIcon(getTextureName() + "_" + (i + 3));
         }
     }
 

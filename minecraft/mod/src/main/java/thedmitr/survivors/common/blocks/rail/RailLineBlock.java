@@ -23,11 +23,11 @@ public class RailLineBlock extends RailBlock {
     @SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(IIconRegister iconRegister) {
-        this.blockIcon = iconRegister.registerIcon(Survivors.MODID + ":" + masterTexture);
+        this.blockIcon = iconRegister.registerIcon(masterTexture);
 
         blockTopIcons = new IIcon[2];
         for (int i = 0; i < blockTopIcons.length; i++) {
-            blockTopIcons[i] = iconRegister.registerIcon(Survivors.MODID + ":" + getTextureName() + "_" + (i + 1));
+            blockTopIcons[i] = iconRegister.registerIcon(getTextureName() + "_" + (i + 1));
         }
     }
 

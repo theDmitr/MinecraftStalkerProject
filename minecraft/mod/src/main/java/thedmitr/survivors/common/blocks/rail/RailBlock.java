@@ -23,8 +23,7 @@ public abstract class RailBlock extends MetableBlock {
     protected final String masterTexture;
 
     public RailBlock(String name, String topTexture, String masterTexture) {
-        super(name, Material.rock);
-        setBlockTextureName(topTexture);
+        super(name, topTexture, Material.rock);
         this.masterTexture = masterTexture;
     }
 
