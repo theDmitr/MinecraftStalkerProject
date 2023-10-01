@@ -8,15 +8,8 @@ import thedmitr.survivors.Survivors;
 
 public class RailLineBlock extends RailBlock {
 
-    @SideOnly(Side.CLIENT)
-    private IIcon[] blockTopIcons;
-
-    private final String masterTexture;
-
     public RailLineBlock(String name, String topTexture, String masterTexture) {
-        super(name);
-        setBlockTextureName(topTexture);
-        this.masterTexture = masterTexture;
+        super(name, topTexture, masterTexture);
     }
 
     @SideOnly(Side.CLIENT)
@@ -27,6 +20,7 @@ public class RailLineBlock extends RailBlock {
         return blockIcon;
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(IIconRegister iconRegister) {
         this.blockIcon = iconRegister.registerIcon(Survivors.MODID + ":" + masterTexture);

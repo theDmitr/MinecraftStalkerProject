@@ -13,8 +13,7 @@ public class TimberBlock extends MetableBlock {
     private IIcon blockIconTopBottom;
 
     public TimberBlock(String name, String texture) {
-        super(Material.wood);
-        setBlockName(name);
+        super(name, Material.wood);
         setBlockTextureName(texture);
     }
 

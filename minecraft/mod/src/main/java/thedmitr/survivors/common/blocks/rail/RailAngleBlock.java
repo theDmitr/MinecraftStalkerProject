@@ -8,15 +8,8 @@ import thedmitr.survivors.Survivors;
 
 public class RailAngleBlock extends RailBlock {
 
-    @SideOnly(Side.CLIENT)
-    private IIcon[] blockTopIcons;
-
-    private final String masterTexture;
-
     public RailAngleBlock(String name, String topTexture, String masterTexture) {
-        super(name);
-        setBlockTextureName(topTexture);
-        this.masterTexture = masterTexture;
+        super(name, topTexture, masterTexture);
     }
 
     @SideOnly(Side.CLIENT)
@@ -25,6 +18,7 @@ public class RailAngleBlock extends RailBlock {
         return side == 1 ? blockTopIcons[meta] : blockIcon;
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(IIconRegister iconRegister) {
         this.blockIcon = iconRegister.registerIcon(Survivors.MODID + ":" + masterTexture);

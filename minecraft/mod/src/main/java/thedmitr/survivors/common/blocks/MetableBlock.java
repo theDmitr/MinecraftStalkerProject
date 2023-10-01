@@ -10,8 +10,9 @@ import org.lwjgl.Sys;
 
 public class MetableBlock extends Block {
 
-    public MetableBlock(Material material) {
+    public MetableBlock(String name, Material material) {
         super(material);
+        setBlockName(name);
     }
 
     @Override

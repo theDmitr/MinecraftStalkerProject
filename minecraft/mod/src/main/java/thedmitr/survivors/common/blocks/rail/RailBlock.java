@@ -15,11 +15,25 @@ import net.minecraftforge.common.util.ForgeDirection;
 import thedmitr.survivors.Survivors;
 import thedmitr.survivors.common.blocks.MetableBlock;
 
-public class RailBlock extends MetableBlock {
+public abstract class RailBlock extends MetableBlock {
 
-    public RailBlock(String name) {
-        super(Material.rock);
-        setBlockName(name);
+    @SideOnly(Side.CLIENT)
+    protected IIcon[] blockTopIcons;
+
+    protected final String masterTexture;
+
+    public RailBlock(String name, String topTexture, String masterTexture) {
+        super(name, Material.rock);
+        setBlockTextureName(topTexture);
+        this.masterTexture = masterTexture;
     }
+
+    @SideOnly(Side.CLIENT)
+    @Override
+    public abstract IIcon getIcon(int side, int meta);
+
+    @SideOnly(Side.CLIENT)
+    @Override
+    public abstract void registerBlockIcons(IIconRegister iconRegister);
 
 }
