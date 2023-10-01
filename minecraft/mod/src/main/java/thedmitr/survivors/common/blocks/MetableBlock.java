@@ -8,7 +8,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import org.lwjgl.Sys;
 
-public class MetableBlock extends Block {
+public abstract class MetableBlock extends Block {
 
     public MetableBlock(String name, Material material) {
         super(material);
