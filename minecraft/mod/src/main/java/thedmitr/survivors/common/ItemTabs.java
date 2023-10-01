@@ -2,12 +2,8 @@ package thedmitr.survivors.common;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import org.lwjgl.Sys;
-import thedmitr.survivors.Survivors;
 import thedmitr.survivors.common.blocks.SurvivorsBlocks;
 import thedmitr.survivors.common.item.SurvivorsItems;
 

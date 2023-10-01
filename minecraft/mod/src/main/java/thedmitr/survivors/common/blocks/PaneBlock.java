@@ -1,6 +1,5 @@
 package thedmitr.survivors.common.blocks;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.Material;
 import thedmitr.survivors.Survivors;
