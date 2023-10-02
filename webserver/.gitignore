@@ -7,6 +7,7 @@
 [Ll]ib64
 [Ll]ocal
 [Ss]cripts/activate
+[Ss]cripts/*.exe
 pyvenv.cfg
 .venv
 pip-selfcheck.json
