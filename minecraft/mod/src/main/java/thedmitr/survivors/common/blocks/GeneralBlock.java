@@ -2,14 +2,13 @@ package thedmitr.survivors.common.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import thedmitr.survivors.Survivors;
 
 public class GeneralBlock extends Block {
 
-    protected GeneralBlock(String name, String texture, Material material) {
-        super(material);
+    protected GeneralBlock(String name, String texture) {
+        super(Material.rock);
         setBlockName(name);
-        setBlockTextureName(Survivors.MODID + ':' + texture);
+        setBlockTextureName(texture);
     }
 
 }

@@ -3,14 +3,13 @@ package thedmitr.survivors.common.blocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.entity.Entity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-public class BarbedWireBlock extends GeneralBlock {
+public class BushBlock extends GeneralBlock {
 
-    public BarbedWireBlock(String name, String texture) {
+    public BushBlock(String name, String texture) {
         super(name, texture);
         float f = 0.4f;
         setBlockBounds(0.5f - f,
@@ -19,11 +18,6 @@ public class BarbedWireBlock extends GeneralBlock {
                 0.5f + f,
                 0.8f,
                 0.5f + f);
-    }
-
-    @Override
-    public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity entity) {
-        entity.setInWeb();
     }
 
     @Override
@@ -51,14 +45,14 @@ public class BarbedWireBlock extends GeneralBlock {
         return 1;
     }
 
-    @SideOnly(Side.CLIENT)
     @Override
+    @SideOnly(Side.CLIENT)
     public IIcon getIcon(int side, int meta) {
         return blockIcon;
     }
 
-    @SideOnly(Side.CLIENT)
     @Override
+    @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister) {
         blockIcon = iconRegister.registerIcon(getTextureName());
     }

@@ -3,14 +3,13 @@ package thedmitr.survivors.common.blocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 
 import java.util.Random;
 
 public class GlassBlock extends GeneralBlock {
 
     public GlassBlock(String name, String texture) {
-        super(name, texture, Material.glass);
+        super(name, texture);
         setHardness(3.0f);
         setStepSound(Block.soundTypeGlass);
     }

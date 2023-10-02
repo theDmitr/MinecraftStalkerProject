@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 public abstract class MetableBlock extends GeneralBlock {
 
     public MetableBlock(String name, String texture, Material material) {
-        super(name, texture, material);
+        super(name, texture);
     }
 
     @Override
