@@ -4,6 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import thedmitr.survivors.Survivors;
 import thedmitr.survivors.common.ItemTabs;
+import thedmitr.survivors.common.blocks.rail.RailAngleBlock;
 import thedmitr.survivors.common.blocks.rail.RailLineBlock;
 
 import java.util.HashMap;
@@ -72,7 +73,7 @@ public class SurvivorsBlocks {
         register(new PaneBlock("glass_pane_1", Survivors.MODID + ':' + "glass_1", Survivors.MODID + ':' + "glass_pane_1_top"));
         register(new PaneBlock("glass_pane_2", Survivors.MODID + ':' + "glass_2", Survivors.MODID + ':' + "glass_pane_2_top"));
         register(new RailLineBlock("gravel_rail_line_block", Survivors.MODID + ':' + "rail/gravel_rail", Survivors.MODID + ':' + "gravel"));
-        register(new RailLineBlock("gravel_rail_angle_block", Survivors.MODID + ':' + "rail/gravel_rail", Survivors.MODID + ':' + "gravel"));
+        register(new RailAngleBlock("gravel_rail_angle_block", Survivors.MODID + ':' + "rail/gravel_rail", Survivors.MODID + ':' + "gravel"));
         register(new TimberBlock("timber_1_block", Survivors.MODID + ':' + "timber_1"));
         register(new BarbedWireBlock("barbed_wire_1_block", Survivors.MODID + ':' + "barbed_wire_1"));
         register(new BarbedWireBlock("barbed_wire_2_block", Survivors.MODID + ':' + "barbed_wire_2"));
