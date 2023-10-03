@@ -46,7 +46,7 @@ public class SurvivorsBlocks {
         register(new GeneralBlock("metal_block_8", Survivors.MODID + ":metal/" + "metal_8"));
         register(new GeneralBlock("gravel_block", Survivors.MODID + ':' + "gravel"));
         register(new GeneralBlock("brick_block_1", Survivors.MODID + ':' + "brick_1"));
-        register(new GeneralBlock("stone_brick_block_1",Survivors.MODID + ':' + "stone_brick_1"));
+        register(new GeneralBlock("stone_brick_block_1", Survivors.MODID + ':' + "stone_brick_1"));
         register(new GeneralBlock("brown_wool_block", Survivors.MODID + ':' + "brown_wool"));
         register(new GeneralBlock("khaki_1_block", Survivors.MODID + ':' + "khaki_1"));
         register(new GeneralBlock("box_1_block", Survivors.MODID + ':' + "box_1"));
