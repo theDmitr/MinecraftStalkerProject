@@ -55,7 +55,7 @@ public class SurvivorsBlocks {
     public static final RailLineBlock gravel_rail_block_1 = addBlock(
             new RailLineBlock(
                     "gravel_rail_line_block",
-                    Survivors.MODID + ':' + "gravel_rail",
+                    Survivors.MODID + ':' + "rail/gravel_rail",
                     Survivors.MODID + ':' + "gravel"
             )
     );
@@ -63,7 +63,7 @@ public class SurvivorsBlocks {
     public static final RailAngleBlock gravel_rail_block_2 = addBlock(
             new RailAngleBlock(
                     "gravel_rail_angle_block",
-                    Survivors.MODID + ':' + "gravel_rail",
+                    Survivors.MODID + ':' + "rail/gravel_rail",
                     Survivors.MODID + ':' + "gravel"
             )
     );
@@ -103,26 +103,199 @@ public class SurvivorsBlocks {
             )
     );
 
-    public static final BarbedWireBlock barbed_wire_block = addBlock(
+    public static final BarbedWireBlock barbed_wire_block_1 = addBlock(
             new BarbedWireBlock(
                     "barbed_wire_1_block",
                     Survivors.MODID + ':' + "barbed_wire_1"
             )
     );
 
+    public static final BarbedWireBlock barbed_wire_block_2 = addBlock(
+            new BarbedWireBlock(
+                    "barbed_wire_2_block",
+                    Survivors.MODID + ':' + "barbed_wire_2"
+            )
+    );
+
+
+    // <editor-fold desc="bush">
     public static final BushBlock bush_1_block = addBlock(
             new BushBlock(
                     "bush_1_block",
-                    Survivors.MODID + ':' + "bush_1"
+                    Survivors.MODID + ":bush/" + "bush_1"
             )
     );
 
     public static final BushBlock bush_2_block = addBlock(
             new BushBlock(
                     "bush_2_block",
-                    Survivors.MODID + ':' + "bush_2"
+                    Survivors.MODID + ":bush/" + "bush_2"
             )
     );
+
+    public static final BushBlock bush_3_block = addBlock(
+            new BushBlock(
+                    "bush_3_block",
+                    Survivors.MODID + ":bush/" + "bush_3"
+            )
+    );
+
+    public static final BushBlock bush_4_block = addBlock(
+            new BushBlock(
+                    "bush_4_block",
+                    Survivors.MODID + ":bush/" + "bush_4"
+            )
+    );
+
+    public static final BushBlock bush_5_block = addBlock(
+            new BushBlock(
+                    "bush_5_block",
+                    Survivors.MODID + ":bush/" + "bush_5"
+            )
+    );
+
+    public static final BushBlock bush_6_block = addBlock(
+            new BushBlock(
+                    "bush_6_block",
+                    Survivors.MODID + ":bush/" + "bush_6"
+            )
+    );
+
+    public static final BushBlock bush_7_block = addBlock(
+            new BushBlock(
+                    "bush_7_block",
+                    Survivors.MODID + ":bush/" + "bush_7"
+            )
+    );
+
+    public static final BushBlock bush_8_block = addBlock(
+            new BushBlock(
+                    "bush_8_block",
+                    Survivors.MODID + ":bush/" + "bush_8"
+            )
+    );
+
+    public static final BushBlock bush_9_block = addBlock(
+            new BushBlock(
+                    "bush_9_block",
+                    Survivors.MODID + ":bush/" + "bush_9"
+            )
+    );
+
+    public static final BushBlock bush_10_block = addBlock(
+            new BushBlock(
+                    "bush_10_block",
+                    Survivors.MODID + ":bush/" + "bush_10"
+            )
+    );
+
+    public static final BushBlock bush_11_block = addBlock(
+            new BushBlock(
+                    "bush_11_block",
+                    Survivors.MODID + ":bush/" + "bush_11"
+            )
+    );
+
+    public static final BushBlock bush_12_block = addBlock(
+            new BushBlock(
+                    "bush_12_block",
+                    Survivors.MODID + ":bush/" + "bush_12"
+            )
+    );
+
+    public static final BushBlock bush_13_block = addBlock(
+            new BushBlock(
+                    "bush_13_block",
+                    Survivors.MODID + ":bush/" + "bush_13"
+            )
+    );
+
+    public static final BushBlock bush_14_block = addBlock(
+            new BushBlock(
+                    "bush_14_block",
+                    Survivors.MODID + ":bush/" + "bush_14"
+            )
+    );
+
+    public static final BushBlock bush_15_block = addBlock(
+            new BushBlock(
+                    "bush_15_block",
+                    Survivors.MODID + ":bush/" + "bush_15"
+            )
+    );
+
+    public static final BushBlock bush_16_block = addBlock(
+            new BushBlock(
+                    "bush_16_block",
+                    Survivors.MODID + ":bush/" + "bush_16"
+            )
+    );
+
+    public static final BushBlock bush_17_block = addBlock(
+            new BushBlock(
+                    "bush_17_block",
+                    Survivors.MODID + ":bush/" + "bush_17"
+            )
+    );
+    //</editor-fold>
+
+    // <editor-fold desc="metal">
+    public static final GeneralBlock metal_1_block = addBlock(
+            new GeneralBlock(
+                    "metal_1_block",
+                    Survivors.MODID + ":metal/" + "metal_1"
+            )
+    );
+
+    public static final GeneralBlock metal_2_block = addBlock(
+            new GeneralBlock(
+                    "metal_2_block",
+                    Survivors.MODID + ":metal/" + "metal_2"
+            )
+    );
+
+    public static final GeneralBlock metal_3_block = addBlock(
+            new GeneralBlock(
+                    "metal_3_block",
+                    Survivors.MODID + ":metal/" + "metal_3"
+            )
+    );
+
+    public static final GeneralBlock metal_4_block = addBlock(
+            new GeneralBlock(
+                    "metal_4_block",
+                    Survivors.MODID + ":metal/" + "metal_4"
+            )
+    );
+
+    public static final GeneralBlock metal_5_block = addBlock(
+            new GeneralBlock(
+                    "metal_5_block",
+                    Survivors.MODID + ":metal/" + "metal_5"
+            )
+    );
+
+    public static final GeneralBlock metal_6_block = addBlock(
+            new GeneralBlock(
+                    "metal_6_block",
+                    Survivors.MODID + ":metal/" + "metal_6"
+            )
+    );
+
+    public static final GeneralBlock metal_7_block = addBlock(
+            new GeneralBlock(
+                    "metal_7_block",
+                    Survivors.MODID + ":metal/" + "metal_7"
+            )
+    );
+
+    public static final GeneralBlock metal_8_block = addBlock(
+            new GeneralBlock(
+                    "metal_8_block",
+                    Survivors.MODID + ":metal/" + "metal_8"
+            )
+    );
+    // </editor-fold>
 
 
     private static <T extends Block> T addBlock(T block) {
