@@ -8,8 +8,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import thedmitr.survivors.common.CommonProxy;
 
 @Mod(modid = Survivors.MODID)
-public class Survivors
-{
+public class Survivors {
     public static final String MODID = "survivors";
 
     @SidedProxy(

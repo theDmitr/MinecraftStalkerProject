@@ -4,12 +4,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import thedmitr.survivors.Survivors;
 import thedmitr.survivors.common.ItemTabs;
-import thedmitr.survivors.common.blocks.rail.RailAngleBlock;
 import thedmitr.survivors.common.blocks.rail.RailLineBlock;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class SurvivorsBlocks {

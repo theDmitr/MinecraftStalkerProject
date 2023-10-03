@@ -5,7 +5,6 @@ import net.minecraft.item.Item;
 import thedmitr.survivors.common.ItemTabs;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 public class SurvivorsItems {
