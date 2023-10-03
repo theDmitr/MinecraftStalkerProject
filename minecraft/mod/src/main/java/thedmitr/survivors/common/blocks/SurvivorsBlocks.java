@@ -1,6 +1,8 @@
 package thedmitr.survivors.common.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import thedmitr.survivors.Survivors;
 import thedmitr.survivors.common.ItemTabs;
@@ -86,13 +88,6 @@ public class SurvivorsBlocks {
             new GeneralBlock(
                     "stone_brick_block_1",
                     Survivors.MODID + ':' + "stone_brick_1"
-            )
-    );
-
-    public static final GeneralBlock wood_planks_1_block = addBlock(
-            new GeneralBlock(
-                    "wood_planks_block_1",
-                    Survivors.MODID + ':' + "wood_planks_1"
             )
     );
 
@@ -295,7 +290,87 @@ public class SurvivorsBlocks {
                     Survivors.MODID + ":metal/" + "metal_8"
             )
     );
+
+    public static final GeneralTransparentBlock metal_9_block = addBlock(
+            new GeneralTransparentBlock(
+                    "metal_9_block",
+                    Survivors.MODID + ":metal/" + "metal_9"
+            )
+    );
     // </editor-fold>
+
+    // <editor-fold desc="planks">
+    public static final GeneralBlock wood_planks_1_block = addBlock(
+            new GeneralBlock(
+                    "wood_planks_block_1",
+                    Survivors.MODID + ":planks/" + "wood_planks_1"
+            )
+    );
+
+    public static final GeneralBlock wood_planks_2_block = addBlock(
+            new GeneralBlock(
+                    "wood_planks_block_2",
+                    Survivors.MODID + ":planks/" + "wood_planks_2"
+            )
+    );
+
+    public static final GeneralBlock wood_planks_3_block = addBlock(
+            new GeneralBlock(
+                    "wood_planks_block_3",
+                    Survivors.MODID + ":planks/" + "wood_planks_3"
+            )
+    );
+
+    public static final GeneralBlock wood_planks_4_block = addBlock(
+            new GeneralBlock(
+                    "wood_planks_block_4",
+                    Survivors.MODID + ":planks/" + "wood_planks_4"
+            )
+    );
+
+    public static final GeneralBlock wood_planks_5_block = addBlock(
+            new GeneralBlock(
+                    "wood_planks_block_5",
+                    Survivors.MODID + ":planks/" + "wood_planks_5"
+            )
+    );
+
+    public static final GeneralBlock wood_planks_6_block = addBlock(
+            new GeneralBlock(
+                    "wood_planks_block_6",
+                    Survivors.MODID + ":planks/" + "wood_planks_6"
+            )
+    );
+
+    // </editor-fold>
+
+    public static final TimberBlock barrel_1_block = addBlock(
+            new TimberBlock(
+                    "barrel_1_block",
+                    Survivors.MODID + ':' + "barrel_1"
+            )
+    );
+
+    public static final TimberBlock tire_1_block = addBlock(
+            new TimberBlock(
+                    "tire_1_block",
+                    Survivors.MODID + ':' + "tire_1"
+            )
+    );
+
+    public static final GeneralBlock khaki_1_block = addBlock(
+            new GeneralBlock(
+                    "khaki_1_block",
+                    Survivors.MODID + ':' + "khaki_1"
+            )
+    );
+
+    public static final GeneralBlock box_1_block = addBlock(
+            new GeneralBlock(
+                    "box_1_block",
+                    Survivors.MODID + ':' + "box_1"
+            )
+    );
 
 
     private static <T extends Block> T addBlock(T block) {
