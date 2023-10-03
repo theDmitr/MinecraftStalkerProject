@@ -4,52 +4,36 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import thedmitr.survivors.common.ItemTabs;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class SurvivorsItems {
 
-    private static final List<Item> items = new ArrayList<>();
+    private static final Map<String, Item> items_map = new HashMap<>();
 
-
-    public static final FoodItem bread = addItem(
-            new FoodItem("bread", "bread", 2, 5f));
-
-    public static final GeneralItem ammo_9_mm = addItem(
-            new GeneralItem("ammo_9_mm", "ammo_9_mm"));
-
-    public static final GeneralItem ammo_7_62_mm = addItem(
-            new GeneralItem("ammo_7_62_mm", "ammo_7_62_mm"));
-
-    public static final GeneralItem chemical_protector = addItem(
-            new GeneralItem("chemical_protector", "chemical_protector"));
-
-    public static final GeneralItem bandage = addItem(
-            new GeneralItem("bandage", "bandage"));
-
-    public static final DrinkItem energy_drink = addItem(
-            new DrinkItem("energy_drink", "energy_drink"));
-
-    public static final GeneralItem empty_can_2 = addItem(
-            new GeneralItem("empty_can_2", "empty_can_2"));
-
-    public static final GeneralItem empty_can_1 = addItem(
-            new GeneralItem("empty_can_1", "empty_can_1"));
-
-
-    public static <T extends Item> T addItem(T item) {
-        return addItem(item, ItemTabs.items_tab);
+    public static Item get(String name) {
+        name = "item." + name;
+        if (!items_map.containsKey(name))
+            return null;
+        return items_map.get(name);
     }
 
-    public static <T extends Item> T addItem(T item, ItemTabs tab) {
-        item.setCreativeTab(tab);
-        items.add(item);
-        return item;
+    private static void register(Item item) {
+        item.setCreativeTab(ItemTabs.items_tab);
+        GameRegistry.registerItem(item, item.getUnlocalizedName());
+        items_map.put(item.getUnlocalizedName(), item);
     }
 
     public static void register() {
-        for(Item item : items)
-            GameRegistry.registerItem(item, item.getUnlocalizedName());
+        register(new GeneralItem("ammo_9_mm", "ammo_9_mm"));
+        register(new GeneralItem("ammo_7_62_mm", "ammo_7_62_mm"));
+        register(new GeneralItem("empty_can_1", "empty_can_1"));
+        register(new GeneralItem("empty_can_2", "empty_can_2"));
+        register(new GeneralItem("chemical_protector", "chemical_protector"));
+        register(new GeneralItem("bandage", "bandage"));
+        register(new DrinkItem("energy_drink", "energy_drink"));
+        register(new FoodItem("bread", "bread", 2, 5f));
     }
 
 }

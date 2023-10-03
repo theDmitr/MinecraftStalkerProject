@@ -33,7 +33,7 @@ public class DrinkItem extends GeneralItem {
         }
 
         if (!player.capabilities.isCreativeMode) {
-            player.inventory.addItemStackToInventory(new ItemStack(SurvivorsItems.empty_can_2));
+            player.inventory.addItemStackToInventory(new ItemStack(SurvivorsItems.get("empty_can_2")));
         }
 
         return stack;
