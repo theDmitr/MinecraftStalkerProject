@@ -1,0 +1,31 @@
+﻿<Window x:Class="SurvivorsLauncher.Views.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SurvivorsLauncher.Views.Windows"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/background.jpg" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="hideButton" Style="{StaticResource titleBarButtonStyle}" Margin="0, 5, 5, 5"
+                    Click="hideButton_Click">
+                <Image Source="/Images/hide.png" />
+            </Button>
+            <Button x:Name="closeButton" Style="{StaticResource titleBarButtonStyle}" Margin="0, 5, 5, 5"
+                    Click="closeButton_Click">
+                <Image Source="/Images/close.png" />
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
