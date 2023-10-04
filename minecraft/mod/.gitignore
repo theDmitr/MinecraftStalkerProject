@@ -21,3 +21,5 @@ eclipse/*
 .factorypath
 
 forge*changelog.txt
+
+src/main/resources/*
