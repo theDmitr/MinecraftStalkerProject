@@ -9,6 +9,9 @@ buildscript {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
+        maven {
+            url "https://cursemaven.com"
+        }
     }
     dependencies {
         classpath('com.anatawa12.forge:ForgeGradle:1.2-1.0.+') {

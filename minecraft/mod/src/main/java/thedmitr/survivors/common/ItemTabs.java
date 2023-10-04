@@ -13,7 +13,7 @@ public class ItemTabs extends CreativeTabs {
         @Override
         @SideOnly(Side.CLIENT)
         public Item getTabIconItem() {
-            return Item.getItemFromBlock(SurvivorsBlocks.get("survivors_block_7"));
+            return Item.getItemFromBlock(SurvivorsBlocks.get("survivors_metal_block_60"));
         }
     };
 
