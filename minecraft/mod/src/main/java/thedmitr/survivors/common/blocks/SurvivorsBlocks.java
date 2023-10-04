@@ -1,7 +1,14 @@
 package thedmitr.survivors.common.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSlab;
+import net.minecraft.block.BlockStairs;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.util.IIcon;
 import thedmitr.survivors.Survivors;
 import thedmitr.survivors.common.ItemTabs;
 import thedmitr.survivors.common.blocks.rail.RailAngleBlock;
@@ -25,6 +32,14 @@ public class SurvivorsBlocks {
         block.setCreativeTab(ItemTabs.blocks_tab);
         GameRegistry.registerBlock(block, block.getUnlocalizedName());
         blocks_map.put(block.getUnlocalizedName(), block);
+    }
+
+    private static void register(GeneralBlock block, boolean hasStairs, boolean hasSlab) {
+        register(block);
+        if (hasStairs)
+            register(new StairsBlock(block.getUnlocalizedName() + "_stairs", block));
+        if (hasSlab)
+            register(new SlabBlock(block.getUnlocalizedName() + "_slab", block.getBlockTextureName()));
     }
 
     public static void register() {
@@ -91,23 +106,23 @@ public class SurvivorsBlocks {
         register(new GeneralBlock("survivors_metal_block_61", Survivors.MODID + ":metal/" + "metal_61"));
         register(new GeneralBlock("survivors_metal_block_62", Survivors.MODID + ":metal/" + "metal_62"));
 
-        register(new GeneralBlock("survivors_bricks_block_1", Survivors.MODID + ':' + "bricks/bricks_1"));
-        register(new GeneralBlock("survivors_bricks_block_2", Survivors.MODID + ':' + "bricks/bricks_2"));
-        register(new GeneralBlock("survivors_bricks_block_3", Survivors.MODID + ':' + "bricks/bricks_3"));
-        register(new GeneralBlock("survivors_bricks_block_4", Survivors.MODID + ':' + "bricks/bricks_4"));
-        register(new GeneralBlock("survivors_bricks_block_5", Survivors.MODID + ':' + "bricks/bricks_5"));
-        register(new GeneralBlock("survivors_bricks_block_6", Survivors.MODID + ':' + "bricks/bricks_6"));
-        register(new GeneralBlock("survivors_bricks_block_7", Survivors.MODID + ':' + "bricks/bricks_7"));
-        register(new GeneralBlock("survivors_bricks_block_8", Survivors.MODID + ':' + "bricks/bricks_8"));
-        register(new GeneralBlock("survivors_bricks_block_9", Survivors.MODID + ':' + "bricks/bricks_9"));
-        register(new GeneralBlock("survivors_bricks_block_10", Survivors.MODID + ':' + "bricks/bricks_10"));
-        register(new GeneralBlock("survivors_bricks_block_11", Survivors.MODID + ':' + "bricks/bricks_11"));
-        register(new GeneralBlock("survivors_bricks_block_12", Survivors.MODID + ':' + "bricks/bricks_12"));
-        register(new GeneralBlock("survivors_bricks_block_13", Survivors.MODID + ':' + "bricks/bricks_13"));
-        register(new GeneralBlock("survivors_bricks_block_14", Survivors.MODID + ':' + "bricks/bricks_14"));
-        register(new GeneralBlock("survivors_bricks_block_15", Survivors.MODID + ':' + "bricks/bricks_15"));
-        register(new GeneralBlock("survivors_bricks_block_16", Survivors.MODID + ':' + "bricks/bricks_16"));
-        register(new GeneralBlock("survivors_bricks_block_17", Survivors.MODID + ':' + "bricks/bricks_17"));
+        register(new GeneralBlock("survivors_bricks_block_1", Survivors.MODID + ':' + "bricks/bricks_1"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_2", Survivors.MODID + ':' + "bricks/bricks_2"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_3", Survivors.MODID + ':' + "bricks/bricks_3"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_4", Survivors.MODID + ':' + "bricks/bricks_4"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_5", Survivors.MODID + ':' + "bricks/bricks_5"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_6", Survivors.MODID + ':' + "bricks/bricks_6"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_7", Survivors.MODID + ':' + "bricks/bricks_7"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_8", Survivors.MODID + ':' + "bricks/bricks_8"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_9", Survivors.MODID + ':' + "bricks/bricks_9"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_10", Survivors.MODID + ':' + "bricks/bricks_10"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_11", Survivors.MODID + ':' + "bricks/bricks_11"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_12", Survivors.MODID + ':' + "bricks/bricks_12"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_13", Survivors.MODID + ':' + "bricks/bricks_13"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_14", Survivors.MODID + ':' + "bricks/bricks_14"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_15", Survivors.MODID + ':' + "bricks/bricks_15"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_16", Survivors.MODID + ':' + "bricks/bricks_16"), true, true);
+        register(new GeneralBlock("survivors_bricks_block_17", Survivors.MODID + ':' + "bricks/bricks_17"), true, true);
         register(new GeneralBlock("survivors_bricks_block_18", Survivors.MODID + ':' + "bricks/bricks_18"));
         register(new GeneralBlock("survivors_bricks_block_19", Survivors.MODID + ':' + "bricks/bricks_19"));
         register(new GeneralBlock("survivors_bricks_block_20", Survivors.MODID + ':' + "bricks/bricks_20"));
@@ -153,37 +168,37 @@ public class SurvivorsBlocks {
         register(new GeneralBlock("survivors_planks_block_4", Survivors.MODID + ':' + "planks/planks_4"));
         register(new GeneralBlock("survivors_planks_block_5", Survivors.MODID + ':' + "planks/planks_5"));
         register(new GeneralBlock("survivors_planks_block_6", Survivors.MODID + ':' + "planks/planks_6"));
-        register(new GeneralBlock("survivors_planks_block_7", Survivors.MODID + ':' + "planks/planks_7"));
-        register(new GeneralBlock("survivors_planks_block_8", Survivors.MODID + ':' + "planks/planks_8"));
-        register(new GeneralBlock("survivors_planks_block_9", Survivors.MODID + ':' + "planks/planks_9"));
-        register(new GeneralBlock("survivors_planks_block_10", Survivors.MODID + ':' + "planks/planks_10"));
-        register(new GeneralBlock("survivors_planks_block_11", Survivors.MODID + ':' + "planks/planks_11"));
-        register(new GeneralBlock("survivors_planks_block_12", Survivors.MODID + ':' + "planks/planks_12"));
-        register(new GeneralBlock("survivors_planks_block_13", Survivors.MODID + ':' + "planks/planks_13"));
-        register(new GeneralBlock("survivors_planks_block_14", Survivors.MODID + ':' + "planks/planks_14"));
-        register(new GeneralBlock("survivors_planks_block_15", Survivors.MODID + ':' + "planks/planks_15"));
-        register(new GeneralBlock("survivors_planks_block_16", Survivors.MODID + ':' + "planks/planks_16"));
-        register(new GeneralBlock("survivors_planks_block_17", Survivors.MODID + ':' + "planks/planks_17"));
-        register(new GeneralBlock("survivors_planks_block_18", Survivors.MODID + ':' + "planks/planks_18"));
-        register(new GeneralBlock("survivors_planks_block_19", Survivors.MODID + ':' + "planks/planks_19"));
-        register(new GeneralBlock("survivors_planks_block_20", Survivors.MODID + ':' + "planks/planks_20"));
-        register(new GeneralBlock("survivors_planks_block_21", Survivors.MODID + ':' + "planks/planks_21"));
-        register(new GeneralBlock("survivors_planks_block_22", Survivors.MODID + ':' + "planks/planks_22"));
-        register(new GeneralBlock("survivors_planks_block_23", Survivors.MODID + ':' + "planks/planks_23"));
-        register(new GeneralBlock("survivors_planks_block_24", Survivors.MODID + ':' + "planks/planks_24"));
-        register(new GeneralBlock("survivors_planks_block_25", Survivors.MODID + ':' + "planks/planks_25"));
-        register(new GeneralBlock("survivors_planks_block_26", Survivors.MODID + ':' + "planks/planks_26"));
-        register(new GeneralBlock("survivors_planks_block_27", Survivors.MODID + ':' + "planks/planks_27"));
-        register(new GeneralBlock("survivors_planks_block_28", Survivors.MODID + ':' + "planks/planks_28"));
-        register(new GeneralBlock("survivors_planks_block_29", Survivors.MODID + ':' + "planks/planks_29"));
-        register(new GeneralBlock("survivors_planks_block_30", Survivors.MODID + ':' + "planks/planks_30"));
-        register(new GeneralBlock("survivors_planks_block_31", Survivors.MODID + ':' + "planks/planks_31"));
-        register(new GeneralBlock("survivors_planks_block_32", Survivors.MODID + ':' + "planks/planks_32"));
-        register(new GeneralBlock("survivors_planks_block_33", Survivors.MODID + ':' + "planks/planks_33"));
-        register(new GeneralBlock("survivors_planks_block_34", Survivors.MODID + ':' + "planks/planks_34"));
-        register(new GeneralBlock("survivors_planks_block_35", Survivors.MODID + ':' + "planks/planks_35"));
-        register(new GeneralBlock("survivors_planks_block_36", Survivors.MODID + ':' + "planks/planks_36"));
-        register(new GeneralBlock("survivors_planks_block_37", Survivors.MODID + ':' + "planks/planks_37"));
+        register(new GeneralBlock("survivors_planks_block_7", Survivors.MODID + ':' + "planks/planks_7"), true, true);
+        register(new GeneralBlock("survivors_planks_block_8", Survivors.MODID + ':' + "planks/planks_8"), true, true);
+        register(new GeneralBlock("survivors_planks_block_9", Survivors.MODID + ':' + "planks/planks_9"), true, true);
+        register(new GeneralBlock("survivors_planks_block_10", Survivors.MODID + ':' + "planks/planks_10"), true, true);
+        register(new GeneralBlock("survivors_planks_block_11", Survivors.MODID + ':' + "planks/planks_11"), true, true);
+        register(new GeneralBlock("survivors_planks_block_12", Survivors.MODID + ':' + "planks/planks_12"), true, true);
+        register(new GeneralBlock("survivors_planks_block_13", Survivors.MODID + ':' + "planks/planks_13"), true, true);
+        register(new GeneralBlock("survivors_planks_block_14", Survivors.MODID + ':' + "planks/planks_14"), true, true);
+        register(new GeneralBlock("survivors_planks_block_15", Survivors.MODID + ':' + "planks/planks_15"), true, true);
+        register(new GeneralBlock("survivors_planks_block_16", Survivors.MODID + ':' + "planks/planks_16"), true, true);
+        register(new GeneralBlock("survivors_planks_block_17", Survivors.MODID + ':' + "planks/planks_17"), true, true);
+        register(new GeneralBlock("survivors_planks_block_18", Survivors.MODID + ':' + "planks/planks_18"), true, true);
+        register(new GeneralBlock("survivors_planks_block_19", Survivors.MODID + ':' + "planks/planks_19"), true, true);
+        register(new GeneralBlock("survivors_planks_block_20", Survivors.MODID + ':' + "planks/planks_20"), true, true);
+        register(new GeneralBlock("survivors_planks_block_21", Survivors.MODID + ':' + "planks/planks_21"), true, true);
+        register(new GeneralBlock("survivors_planks_block_22", Survivors.MODID + ':' + "planks/planks_22"), true, true);
+        register(new GeneralBlock("survivors_planks_block_23", Survivors.MODID + ':' + "planks/planks_23"), true, true);
+        register(new GeneralBlock("survivors_planks_block_24", Survivors.MODID + ':' + "planks/planks_24"), true, true);
+        register(new GeneralBlock("survivors_planks_block_25", Survivors.MODID + ':' + "planks/planks_25"), true, true);
+        register(new GeneralBlock("survivors_planks_block_26", Survivors.MODID + ':' + "planks/planks_26"), true, true);
+        register(new GeneralBlock("survivors_planks_block_27", Survivors.MODID + ':' + "planks/planks_27"), true, true);
+        register(new GeneralBlock("survivors_planks_block_28", Survivors.MODID + ':' + "planks/planks_28"), true, true);
+        register(new GeneralBlock("survivors_planks_block_29", Survivors.MODID + ':' + "planks/planks_29"), true, true);
+        register(new GeneralBlock("survivors_planks_block_30", Survivors.MODID + ':' + "planks/planks_30"), true, true);
+        register(new GeneralBlock("survivors_planks_block_31", Survivors.MODID + ':' + "planks/planks_31"), true, true);
+        register(new GeneralBlock("survivors_planks_block_32", Survivors.MODID + ':' + "planks/planks_32"), true, true);
+        register(new GeneralBlock("survivors_planks_block_33", Survivors.MODID + ':' + "planks/planks_33"), true, true);
+        register(new GeneralBlock("survivors_planks_block_34", Survivors.MODID + ':' + "planks/planks_34"), true, true);
+        register(new GeneralBlock("survivors_planks_block_35", Survivors.MODID + ':' + "planks/planks_35"), true, true);
+        register(new GeneralBlock("survivors_planks_block_36", Survivors.MODID + ':' + "planks/planks_36"), true, true);
+        register(new GeneralBlock("survivors_planks_block_37", Survivors.MODID + ':' + "planks/planks_37"), true, true);
         register(new GeneralBlock("survivors_planks_block_38", Survivors.MODID + ':' + "planks/planks_38"));
         register(new GeneralBlock("survivors_planks_block_39", Survivors.MODID + ':' + "planks/planks_39"));
         register(new GeneralBlock("survivors_planks_block_40", Survivors.MODID + ':' + "planks/planks_40"));
@@ -245,6 +260,11 @@ public class SurvivorsBlocks {
         register(new TimberBlock("survivors_barrel_block_1", Survivors.MODID + ':' + "barrel_1"));
 
         register(new LadderBlock("survivors_ladder_block_1", Survivors.MODID + ":ladder_1"));
+
+        register(new GeneralBlock("survivors_dirt_block", Survivors.MODID + ":dirt"));
+
+        register(new CustomTopIconBlock("survivors_podzol_block", Survivors.MODID + ":podzol_top", Survivors.MODID + ":podzol"));
+        register(new CustomTopIconBlock("survivors_grass_block", Survivors.MODID + ":grass_top", Survivors.MODID + ":grass"));
     }
 
 }

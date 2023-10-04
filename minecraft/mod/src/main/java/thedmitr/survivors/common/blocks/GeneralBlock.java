@@ -11,4 +11,8 @@ public class GeneralBlock extends Block {
         setBlockTextureName(texture);
     }
 
+    public String getBlockTextureName() {
+        return textureName;
+    }
+
 }
